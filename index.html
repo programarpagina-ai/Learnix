@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnix - Aprender jugando</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+
+    <header>
+        <nav class="nav">
+            <div class="nav-left">
+                <div class="brand">
+                     <img src="logo-learnix.png" alt="Learnix Logo" class="logo-img">
+                    <span class="brand-text">Learnix</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="coins">
+                     <img src="monedas.png" alt="Moneda" class="coin-icon">
+                    <span id="coinCount">150</span>
+                </div>
+                <div id="profileBtn" class="profile" aria-expanded="false" role="button" tabindex="0">
+                    <span class="avatar">👤</span>
+                    <div class="popup" role="menu" aria-hidden="true">
+                        <strong>Usuario</strong>
+                        <div class="progress">
+                            <div id="xpFill" class="progress-fill"></div>
+                        </div>
+                        <span class="xp-text">XP: <span id="xpValue">75</span>%</span>
+                        <a href="perfil.html">Ver perfil</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Aprender nunca fue tan divertido</h1>
+                <p class="hero-description">Explora, jugá, resolvé y entendé con Learnix, tu laboratorio virtual del conocimiento.</p>
+                <button class="hero-btn" id="exploreBtn">¡Explorar ahora!</button>
+            </div>
+        </section>
+        <section class="subjects-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">🎮</div>
+                    <h2 class="section-title">Elegí tu Aventura</h2>
+                    <p class="section-description">Cada materia es una nueva aventura épica llena de desafíos emocionantes y recompensas increíbles</p>
+                </div>
+
+                <div class="subjects-grid" id="subjectsGrid">
+                     Las tarjetas se generarán dinámicamente 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

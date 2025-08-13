@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometría Básica - Learnix</title>
+    <link rel="stylesheet" href="geometria-basica.css">
+</head>
+<body>
+ 
+    <header>
+        <nav class="nav">
+            <a href="matematicas.html" class="back-btn">
+                ← Volver a Matemáticas
+            </a>
+            
+            <div class="brand">
+               <img src="logo-learnix.png" alt="Learnix Logo" class="logo-img">
+                    <span class="brand-text">Learnix</span>
+                </a>
+            </div>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="coins">
+                    <img src="monedas.png" alt="Moneda" class="coin-icon">
+                    <span id="coinCount">0</span>
+                </div>
+                
+                <div class="profile" id="profileBtn" aria-expanded="false">
+                    <div class="avatar">👤</div>
+                    <div class="popup">
+                        <span class="xp-text">XP: <span id="xpValue">60</span>/100</span>
+                        <div class="progress">
+                            <div class="progress-fill" id="xpFill"></div>
+                        </div>
+                        <a href="#perfil">Ver perfil completo</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="geometric-bg">
+            <div class="shape triangle"></div>
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape pentagon"></div>
+            <div class="shape hexagon"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-icon">📐</div>
+            <h1 class="hero-title">Geometría Básica</h1>
+            <p class="hero-description">
+                Explora el fascinante mundo de las formas, ángulos y figuras geométricas
+                a través de lecciones interactivas y juegos educativos.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" id="completedLessons">0</span>
+                    <span class="stat-label">Lecciones Completadas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="totalPoints">0</span>
+                    <span class="stat-label">Puntos Ganados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="overallProgress">0</span>
+                    <span class="stat-label">% Progreso</span>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-card">
+                <h3>Tu Progreso en Geometría Básica</h3>
+                <div class="progress-bar-large">
+                    <div class="progress-fill-large" id="progressFillLarge"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="progressText">0% completado</span>
+                    <span id="nextLesson">Siguiente: Puntos y Líneas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">🎮 Juegos Interactivos</h2>
+            <div class="games-grid">
+                <div class="game-card" id="shapeMemory">
+                    <div class="game-icon">🧠</div>
+                    <h3>Memoria de Figuras</h3>
+                    <p>Encuentra las parejas de figuras geométricas</p>
+                    <div class="game-difficulty">Fácil</div>
+                </div>
+                
+                <div class="game-card" id="shapeBuilder">
+                    <div class="game-icon">🔨</div>
+                    <h3>Constructor de Figuras</h3>
+                    <p>Construye figuras siguiendo las instrucciones</p>
+                    <div class="game-difficulty">Medio</div>
+                </div>
+                
+                <div class="game-card" id="angleGame">
+                    <div class="game-icon">📐</div>
+                    <h3>Cazador de Ángulos</h3>
+                    <p>Identifica y clasifica diferentes tipos de ángulos</p>
+                    <div class="game-difficulty">Medio</div>
+                </div>
+                
+                <div class="game-card" id="perimeterRace">
+                    <div class="game-icon">🏃</div>
+                    <h3>Carrera de Perímetros</h3>
+                    <p>Calcula perímetros lo más rápido posible</p>
+                    <div class="game-difficulty">Difícil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="section-title">🛠️ Herramientas Interactivas</h2>
+            <div class="tools-grid">
+                <div class="tool-card" id="calculator">
+                    <div class="tool-icon">🧮</div>
+                    <h3>Calculadora Geométrica</h3>
+                    <p>Calcula perímetros, áreas y más</p>
+                </div>
+                
+                <div class="tool-card" id="protractor">
+                    <div class="tool-icon">📐</div>
+                    <h3>Transportador Virtual</h3>
+                    <p>Mide y dibuja ángulos precisos</p>
+                </div>
+                
+                <div class="tool-card" id="compass">
+                    <div class="tool-icon">🧭</div>
+                    <h3>Compás Digital</h3>
+                    <p>Dibuja círculos y arcos perfectos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lessons-section">
+        <div class="container">
+            <h2 class="section-title">📚 Lecciones de Geometría</h2>
+            <div class="lessons-grid" id="lessonsGrid">
+                 Las lecciones se generarán dinámicamente 
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="gameTitle">Juego</h2>
+                <button class="close-btn" id="closeGameModal">&times;</button>
+            </div>
+            <div class="modal-body" id="gameBody">
+                 Contenido del juego se cargará aquí 
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="toolTitle">Herramienta</h2>
+                <button class="close-btn" id="closeToolModal">&times;</button>
+            </div>
+            <div class="modal-body" id="toolBody">
+                 Contenido de la herramienta se cargará aquí 
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="lessonModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="lessonTitle">Lección</h2>
+                <button class="close-btn" id="closeLessonModal">&times;</button>
+            </div>
+            <div class="modal-body" id="lessonBody">
+                 Contenido de la lección se cargará aquí 
+            </div>
+        </div>
+    </div>
+
+    <script src="geometria-basica.js"></script>
+</body>
+</html>
